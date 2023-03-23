@@ -23,3 +23,5 @@ conda env create -f ./environment/eqsr_env.yaml
 ```
 
 ## Training
+
+## Inference with a pretrained EQSR model
