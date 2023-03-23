@@ -2,7 +2,7 @@
 ## Accepted by CVPR2023
 **The official repository with Pytorch**
 
-Our paper can be downloaded from [[Arxiv]](). [ <a href="https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb)
+Our paper can be downloaded from [[Arxiv]](). Try EQSR in Colab [ <a href="https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb)
 
 ## Installation
 **Clone this repo:**
