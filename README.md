@@ -4,7 +4,7 @@
 
 Our paper can be downloaded from [[Arxiv]]().
 
-Try EQSR in Colab [ <a href="https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb)
+Try EQSR in Colab [ <a href="https://colab.research.google.com/github/neuralchen/EQSR/blob/main/demo.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/github/neuralchen/EQSR/blob/main/demo.ipynb)
 
 ## Installation
 **Clone this repo:**
@@ -25,3 +25,9 @@ conda env create -f ./environment/eqsr_env.yaml
 ## Training
 
 ## Inference with a pretrained EQSR model
+
+## Results
+
+## To cite our paper
+
+## Related Projects
