@@ -5,6 +5,14 @@
 Our paper can be downloaded from [[Arxiv]]().
 Try EQSR in Colab [ <a href="https://colab.research.google.com/github/neuralchen/EQSR/blob/main/demo.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/github/neuralchen/EQSR/blob/main/demo.ipynb)
 
+## Introduction
+
+EQSR is designed to pursue scale-equivariance.
+We compare the PSNR degradation rate of our method and ArbSR.
+Taking the SOTA fixed-scale method HAT as reference, our model presents a more stable degradation as the scale increases, reflecting
+the equivariance of our method.
+![motivation](/doc/img/motivation.PNG)
+
 ## Attention
 
 ***We are archiving our code and awaiting approval for code public access!***
@@ -32,6 +40,8 @@ conda env create -f ./environment/eqsr_env.yaml
 ## Inference with a pretrained EQSR model
 
 ## Results
+
+![peformance](/doc/img/peformance.PNG)
 
 ## To cite our paper
 
