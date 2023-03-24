@@ -7,7 +7,7 @@ Try EQSR in Colab [ <a href="https://colab.research.google.com/github/neuralchen
 
 ## Introduction
 
-EQSR is designed to pursue scale-equivariance.
+EQSR is designed to pursue scale-equivariance image super-resolution.
 We compare the PSNR degradation rate of our method and ArbSR.
 Taking the SOTA fixed-scale method HAT as reference, our model presents a more stable degradation as the scale increases, reflecting
 the equivariance of our method.
