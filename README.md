@@ -4,6 +4,12 @@
 
 Our paper can be downloaded from [[Arxiv]]().
 
+## Attention
+
+***We are archiving our code and awaiting approval for code public access!***
+
+***The code will be open source within four days, please be patient and enthusiastic***
+
 Try EQSR in Colab [ <a href="https://colab.research.google.com/github/neuralchen/EQSR/blob/main/demo.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/github/neuralchen/EQSR/blob/main/demo.ipynb)
 
 ## Installation
