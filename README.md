@@ -13,11 +13,6 @@ Taking the SOTA fixed-scale method HAT as reference, our model presents a more s
 the equivariance of our method.
 ![motivation](/doc/img/motivation.PNG)
 
-## Attention
-
-***We are archiving our code and awaiting approval for code public access!***
-
-***The code will be open source within four days, please be patient and enthusiastic***
 
 ## Installation
 **Clone this repo:**
@@ -26,22 +21,47 @@ git clone https://github.com/neuralchen/EQSR.git
 cd EQSR
 ```
 **Dependencies:**
-- PyTorch 1.7.0
-- Pillow 8.3.1; Matplotlib 3.3.4; opencv-python 4.5.3; Faiss 1.7.1; tqdm 4.61.2; Ninja 1.10.2
+- python3.7+
+- pytorch
+- pyyaml, scipy, tqdm, imageio, einops, opencv-python
+- cupy
 
-All dependencies for defining the environment are provided in `environment/eqsr_env.yaml`.
-We recommend running this repository using [Anaconda](https://docs.anaconda.com/anaconda/install/) (you may need to modify `eqsr_env.yaml` to install PyTorch that matches your own CUDA version following [https://pytorch.org/](https://pytorch.org/)):
-```bash
-conda env create -f ./environment/eqsr_env.yaml
-```
+(Note: Please do not directly use "pip install" to install basicsr. It might lead to some issues due to version differences.)
 
 ## Training
 
+We divide the training into two stages. The first stage involves pretraining on the ImageNet dataset, and the second stage entails fine-tuning on the DF2K dataset.
+
+You can modify parameters such as batch size, iterations, learning rate, etc. in the configuration files.
+
+-  Phase 1
+Modify the dataset path in options/train/train*.xml, and run the following command to train.
+```
+CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port=4320 train.py -opt train_EQSR_ImageNet_from_scratch --launcher pytorch
+```
+-  Phase 2
+Modify the paths of the datasets and the location of the pretrained model in the configuration file.
+
+```
+CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port=4320 train.py -opt train_EQSR_finetune_from_ImageNet_pretrain --launcher pytorch
+```
+
 ## Inference with a pretrained EQSR model
+### Pretrained Models
+- Baidu Netdisk (百度网盘)：https://pan.baidu.com/s/1ui-GSbAQLuTyOmxBlAQZVg 
+- Extraction Code (提取码)：lspg
 
-## Results
+Modify the dataset path and pre-trained model path in options/test/test*.xml, and run the following command to test.
+If GPU memory is limited, you can consider adding ```PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32``` before these commands.
 
-![peformance](/doc/img/peformance.PNG)
+```
+python test.py -opt options/test/testx234.yml
+python test.py -opt options/test/testx6.yml
+python test.py -opt options/test/testx8.yml
+```
+
+## Ackownledgements
+This code is built based on [HAT](https://github.com/XPixelGroup/HAT) and [BasicSR](https://github.com/XPixelGroup/BasicSR). We thank the authors for sharing the codes.
 
 ## To cite our paper
 
