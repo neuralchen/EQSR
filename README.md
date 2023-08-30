@@ -2,8 +2,7 @@
 ## Accepted by CVPR2023
 **The official repository with Pytorch**
 
-Our paper can be downloaded from [[Arxiv]]().
-Try EQSR in Colab [ <a href="https://colab.research.google.com/github/neuralchen/EQSR/blob/main/demo.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/github/neuralchen/EQSR/blob/main/demo.ipynb)
+Our paper can be downloaded from [EQSR](https://openaccess.thecvf.com/content/CVPR2023/papers/Wang_Deep_Arbitrary-Scale_Image_Super-Resolution_via_Scale-Equivariance_Pursuit_CVPR_2023_paper.pdf).
 
 ## Introduction
 
@@ -45,6 +44,12 @@ Modify the paths of the datasets and the location of the pretrained model in the
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port=4320 train.py -opt train_EQSR_finetune_from_ImageNet_pretrain --launcher pytorch
 ```
+
+## Datasets
+TODO
+
+### Preprocess
+TODO
 
 ## Inference with a pretrained EQSR model
 ### Pretrained Models
